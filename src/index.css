@@ -597,7 +597,7 @@ button {
   inset: 0;
   padding: calc(var(--nav-h) + 24px) clamp(40px, 7vw, 120px) 70px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
 }
 
@@ -614,10 +614,22 @@ button {
 }
 
 /* Subtle scrim behind the Shire panel to guarantee text contrast
-   over the brighter right side of the background image. */
+   over the brighter right side of the background image.
+   padding-left + negative margin-left extends the scrim past the text's left
+   edge without shifting the text itself. The vertical extension is delegated
+   to a ::before so it doesn't break the parent flex container's alignment. */
 .panel--shire {
-  padding: 28px 32px;
-  margin: -28px -32px;
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  padding-left: 32px;
+  margin-left: -32px;
+}
+
+.panel--shire::before {
+  content: "";
+  position: absolute;
+  inset: -28px 0;
   background: radial-gradient(
     ellipse 110% 100% at 0% 50%,
     rgba(0, 0, 0, 0.45) 0%,
@@ -626,6 +638,8 @@ button {
     transparent 100%
   );
   border-radius: 4px;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .panel::-webkit-scrollbar {

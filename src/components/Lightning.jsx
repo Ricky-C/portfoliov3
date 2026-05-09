@@ -199,6 +199,10 @@ const Lightning = ({
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(rafId);
+      gl.deleteBuffer(vertexBuffer);
+      gl.deleteProgram(program);
+      gl.deleteShader(vertexShader);
+      gl.deleteShader(fragmentShader);
     };
   }, [hue, xOffset, speed, intensity, size]);
 

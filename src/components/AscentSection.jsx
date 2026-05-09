@@ -44,7 +44,11 @@ export default function AscentSection() {
         <p className="contact__eyebrow">Send a raven</p>
         <p className="contact__email">enrique@caballero.dev</p>
         <div className="contact__links">
-          <a href="#" onClick={(e) => e.preventDefault()}>
+          <a
+            href="https://github.com/Ricky-C"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
           <span aria-hidden="true">·</span>
