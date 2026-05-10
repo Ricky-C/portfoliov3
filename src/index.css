@@ -1330,17 +1330,21 @@ button {
 
   /* Shire panel desktop styling extends the scrim past the panel box
      (overflow: visible, negative left margin) — that breaks internal
-     scrolling, which we need on mobile so users can read content taller
-     than the viewport. Re-enable scroll, contain the scrim within the
-     panel bounds, and align the panel flush with the chapter padding. */
+     scrolling on mobile and the off-canvas extension is meaningless on
+     a narrow viewport anyway. Re-enable scroll and align the panel
+     flush with the chapter padding. */
   .panel--shire {
     overflow: auto;
     padding-left: 0;
     margin-left: 0;
   }
 
+  /* Drop the radial scrim entirely on mobile: the kicker / hero title /
+     lead sit directly on the chapter background image (its overlay +
+     vignette already provide contrast), and the cards below carry their
+     own gradient backgrounds. */
   .panel--shire::before {
-    inset: 0;
+    display: none;
   }
 
   /* Default scroll chaining: panel scrolls its own content first, then
@@ -1351,13 +1355,59 @@ button {
     overscroll-behavior-y: auto;
   }
 
+  /* Chapter-to-chapter clip-path/scale/filter choreography is
+     desktop-only. On mobile we render chapters in normal flow, one
+     viewport-height each, with native scroll-snap for navigation. The
+     scroll handler in App.jsx still writes --reveal / --retreat but
+     nothing here reads them. */
+  .chapters-viewport {
+    position: static;
+    height: auto;
+    width: auto;
+  }
+
+  .chapter {
+    position: relative;
+    height: 100vh;
+    clip-path: none;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    /* JS sets inline visibility:hidden when a chapter is "retreated";
+       on mobile every chapter stays on-screen in flow, so neutralise it. */
+    visibility: visible !important;
+  }
+
+  .chapter__page {
+    transform: none;
+    filter: none;
+  }
+
+  .chapter__fold {
+    display: none;
+  }
+
+  /* The transition veil is part of the desktop choreography; on mobile
+     it would just dim chapter content during scroll. */
+  .veil {
+    display: none;
+  }
+
+  /* Snap targets only existed to provide scroll height for the desktop
+     sticky-overlay architecture. With chapters back in flow they'd just
+     be 100vh empty spacers. */
+  .snap-target {
+    display: none;
+  }
+
   .chap-nav__list {
     display: none;
   }
 
+  /* Both the next-chapter affordance and the progress bar are
+     bottom-anchored chrome that just eat real estate on small screens —
+     scroll-snap already handles inter-chapter navigation here. */
   .next-chapter {
-    right: 28px;
-    bottom: 60px;
+    display: none;
   }
 
   .progress {
