@@ -8,11 +8,11 @@ export default function FellowshipSection() {
         <span className="panel__chap">Chapter II · The Fellowship</span>
       </div>
 
-      <h2 className="section__title">Teams that shipped together.</h2>
+      <h2 className="section__title">Strength in the Fellowship.</h2>
 
       <p className="section__lead">
-        A decade with three companies. Every role left me with better engineers
-        as friends and a broken-in mental model of a new problem domain.
+        A decade of building for millions has proven that the most resilient systems are born from elite 
+        collaboration. Every high-visibility deployment and legacy migration was a shared mission, executed alongside peers who challenged the architecture and raised the standard.
       </p>
 
       <ol className="timeline">

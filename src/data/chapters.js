@@ -30,48 +30,48 @@ export const CHAPTERS = [
 
 export const EXPERIENCE = [
   {
-    company: "Meridian Labs",
-    role: "Staff Software Engineer",
+    company: "Exelon Corp.",
+    role: "Senior Software Engineer (Security Champion)",
     period: "2022 — Present",
     blurb:
-      "Leading platform reliability for a distributed graph database serving 8B requests/day. Cut p99 latency 42% by rewriting the scheduler in Rust.",
-    stack: ["Rust", "Kubernetes", "gRPC", "Postgres"],
+      "Leading enterprise modernization by migrating legacy SharePoint architectures to a decoupled ContentStack ecosystem. As Security Champion, I fortified the backend with C# microservices and reduced technical debt by 30% through automated testing standards.",
+    stack: ["C#", ".NET Core", "Angular", "Azure", "GitHub Actions"],
   },
   {
-    company: "Northwind Systems",
-    role: "Senior Software Engineer",
-    period: "2019 — 2022",
+    company: "VSA Partners",
+    role: "Software Engineer",
+    period: "2018 — 2022",
     blurb:
-      "Built the real-time pricing engine powering 14M trades/day. Designed the sharded event-sourcing layer; mentored four engineers to senior.",
-    stack: ["Go", "Kafka", "Redis", "AWS"],
+      "Navigated zero-fail release cycles for Fortune 100 clients including Google, IBM, and Meta. Managed high-traffic launch windows and engineered the presentation of IBM's public financial data with absolute data integrity.",
+    stack: ["React", "Javascript", "PHP"],
   },
   {
     company: "Lantern",
     role: "Software Engineer II",
     period: "2016 — 2019",
     blurb:
-      "Shipped the first version of the customer-data platform. Owned ingestion, transformation, and the public SDK across three languages.",
-    stack: ["TypeScript", "Python", "Snowflake"],
+      "Architected high-traffic e-commerce storefronts for global brands like HBO and Warner Bros. Optimized Shopify and Magento platforms to ensure seamless experiences for over 2 million monthly active users during major launch events.",
+    stack: ["Shopify", "Magento", "Javascript", "PHP", "Liquid"],
   },
 ];
 
 export const PROJECTS = [
   {
-    name: "Anduril",
-    tagline: "A distributed query planner",
-    desc: "A cost-based optimizer for federated SQL over heterogeneous stores. Written from scratch in Rust; 3.2k GitHub stars.",
-    link: "github.com/enriador/anduril",
+    name: "Ironforge",
+    tagline: "Internal Developer Platform (IDP)",
+    desc: "A self-service portal engineered to empower developers to provision static website infrastructure on AWS instantly. Built from scratch with Go to automate the bridge between application deployment and cloud resources.",
+    link: "github.com/Ricky-C/ironforge",
   },
   {
-    name: "Mithril",
-    tagline: "Zero-copy serialization for Go",
-    desc: "A schema-first codec that outperforms Protobuf by 2.8× on the decode path. Used in production at three companies.",
-    link: "github.com/enriador/mithril",
+    name: "Flight Angels",
+    tagline: "Volunteer Infrastructure Automation",
+    desc: "Led the migration and workflow automation for a rescue operation platform. Built custom Shopify integrations to streamline intake forms and rescue request management for a distributed volunteer team.",
+    link: "www.flightangels.org",
   },
   {
-    name: "Palantír",
-    tagline: "Time-travel debugger for React",
-    desc: "Record, replay, and branch component state across renders. Open-source devtools extension with 40k+ installs.",
-    link: "palantir.dev",
+    name: "Orthanc (Coming Soon)",
+    tagline: "Cloud Security Posture Dashboard",
+    desc: "A collaborative platform for monitoring cloud infrastructure health and defensive posture. Led the security backbone and AWS SDK integration in Go, ensuring visibility and fortification for complex cloud environments.",
+    link: "#",
   },
 ];
