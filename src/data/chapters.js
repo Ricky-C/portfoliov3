@@ -47,7 +47,7 @@ export const EXPERIENCE = [
   },
   {
     company: "The Araca Group",
-    role: "Software Engineer ",
+    role: "Software Engineer",
     period: "2017 — 2018",
     blurb:
       "Built high-traffic e-commerce storefronts for global brands like HBO and Warner Bros. Optimized Shopify and Magento platforms to ensure seamless experiences for over 2 million monthly active users during major launch events.",
