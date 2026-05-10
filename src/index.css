@@ -705,6 +705,13 @@ button {
   gap: 12px;
 }
 
+/* Stacked sibling details cards (Education / Certifications) get
+   the same vertical rhythm as the skills card. */
+.hero__details--education,
+.hero__details--certs {
+  margin-top: 16px;
+}
+
 .hero__detail {
   display: flex;
   align-items: baseline;

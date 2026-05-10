@@ -73,6 +73,36 @@ export default function ShireSection() {
           </div>
         </div>
       </div>
+
+      <div className="hero__details hero__details--education">
+        <div className="hero__detail">
+          <span className="hero__detail-label">Degree</span>
+          <span className="hero__detail-value">
+            B.A.S. Information Technology, Cybersecurity &amp; Ethical Hacking
+          </span>
+        </div>
+        <div className="hero__detail">
+          <span className="hero__detail-label">School</span>
+          <span className="hero__detail-value">Broward College</span>
+        </div>
+        <div className="hero__detail">
+          <span className="hero__detail-label">Expected</span>
+          <span className="hero__detail-value">2027</span>
+        </div>
+      </div>
+
+      <div className="hero__details hero__details--certs">
+        <div className="hero__detail">
+          <span className="hero__detail-label">AWS</span>
+          <span className="hero__detail-value">
+            Solutions Architect — Associate
+          </span>
+        </div>
+        <div className="hero__detail">
+          <span className="hero__detail-label">CompTIA</span>
+          <span className="hero__detail-value">Security+</span>
+        </div>
+      </div>
     </div>
   );
 }
