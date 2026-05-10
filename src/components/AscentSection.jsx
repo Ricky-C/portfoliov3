@@ -39,28 +39,6 @@ export default function AscentSection() {
           </li>
         ))}
       </ul>
-
-      <div className="contact" id="contact">
-        <p className="contact__eyebrow">Send a raven</p>
-        <p className="contact__email">enrique@caballero.dev</p>
-        <div className="contact__links">
-          <a
-            href="https://github.com/Ricky-C"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <span aria-hidden="true">·</span>
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            LinkedIn
-          </a>
-          <span aria-hidden="true">·</span>
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            Writing
-          </a>
-        </div>
-      </div>
     </div>
   );
 }

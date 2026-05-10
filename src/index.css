@@ -976,57 +976,129 @@ button {
 }
 
 
-/* ============ Contact ============ */
-.contact {
-  max-width: 620px;
-  padding: 20px 20px;
-  border-left: 2px solid var(--accent-ascent);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0) 80%
-  );
-  backdrop-filter: blur(2px);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+/* ============ Contact modal ============ */
+.contact-modal {
+  /* Native <dialog> centers itself in the top layer; we just style it. */
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  width: min(440px, 92vw);
+  max-height: min(560px, 92vh);
+  overflow: visible;
 }
 
-.contact__eyebrow {
-  margin: 0;
+.contact-modal::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+}
+
+.contact-modal__panel {
+  position: relative;
+  padding: 36px 32px 32px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  background: linear-gradient(
+    160deg,
+    rgba(20, 22, 28, 0.96),
+    rgba(10, 11, 14, 0.96)
+  );
+  box-shadow:
+    0 30px 80px -20px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+}
+
+.contact-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--ink-mute);
+  border-radius: 2px;
+  transition: color 200ms var(--ease-soft), background 200ms var(--ease-soft);
+}
+
+.contact-modal__close:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-modal__eyebrow {
+  margin: 0 0 8px;
   font-size: 10.5px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--ink-mute);
 }
 
-.contact__email {
+.contact-modal__title {
   font-family: var(--serif);
-  font-size: 30px;
   font-weight: 500;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+  margin: 0 0 22px;
+}
+
+.contact-modal__list {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-modal__action {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  text-decoration: none;
+  color: var(--ink);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0) 80%
+  );
+  transition: border-color 250ms var(--ease-soft),
+    background 250ms var(--ease-soft),
+    transform 250ms var(--ease-soft);
+}
+
+.contact-modal__action:hover {
+  border-color: var(--rule-strong);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.01) 80%
+  );
+  transform: translateX(2px);
+}
+
+.contact-modal__action-label {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
   letter-spacing: 0.005em;
 }
 
-.contact__links {
-  display: flex;
-  gap: 10px;
-  font-size: 13px;
+.contact-modal__action-meta {
+  font-family: var(--mono);
+  font-size: 11.5px;
   color: var(--ink-mute);
-  align-items: center;
-  margin-top: 4px;
-}
-
-.contact__links a {
-  text-decoration: none;
-  padding: 4px 2px;
-  border-bottom: 1px solid transparent;
-  transition: border-color 200ms var(--ease-soft), color 200ms var(--ease-soft);
-}
-
-.contact__links a:hover {
-  color: var(--ink);
-  border-bottom-color: var(--rule-strong);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 /* ============ Next-chapter affordance ============ */
