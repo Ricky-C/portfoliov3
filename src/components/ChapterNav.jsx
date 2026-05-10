@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { CHAPTERS } from "../data/chapters";
+import ContactModal from "./ContactModal";
 
 export default function ChapterNav({ current, onJump }) {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <nav className="chap-nav" aria-label="Chapters">
       <div className="chap-nav__brand">
@@ -28,17 +32,19 @@ export default function ChapterNav({ current, onJump }) {
         ))}
       </ol>
 
-      <a
+      <button
+        type="button"
         className="chap-nav__cta"
-        href="#contact"
-        onClick={(e) => {
-          e.preventDefault();
-          onJump(CHAPTERS.length - 1);
-        }}
+        onClick={() => setContactOpen(true)}
       >
-        Send a raven
+        Light the Beacon
         <span aria-hidden="true"> →</span>
-      </a>
+      </button>
+
+      <ContactModal
+        open={contactOpen}
+        onClose={() => setContactOpen(false)}
+      />
     </nav>
   );
 }
