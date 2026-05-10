@@ -42,15 +42,15 @@ export const EXPERIENCE = [
     role: "Software Engineer",
     period: "2018 — 2022",
     blurb:
-      "Navigated zero-fail release cycles for Fortune 100 clients including Google, IBM, and Meta. Managed high-traffic launch windows and engineered the presentation of IBM's public financial data with absolute data integrity.",
+      "Designed scalable React component patterns to enable modular UI development. Managed high-traffic launch windows and engineered the presentation of IBM's public financial data with absolute data integrity.",
     stack: ["React", "Javascript", "PHP"],
   },
   {
-    company: "Lantern",
-    role: "Software Engineer II",
-    period: "2016 — 2019",
+    company: "The Araca Group",
+    role: "Software Engineer",
+    period: "2017 — 2018",
     blurb:
-      "Architected high-traffic e-commerce storefronts for global brands like HBO and Warner Bros. Optimized Shopify and Magento platforms to ensure seamless experiences for over 2 million monthly active users during major launch events.",
+      "Built high-traffic e-commerce storefronts for global brands like HBO and Warner Bros. Optimized Shopify and Magento platforms to ensure seamless experiences for over 2 million monthly active users during major launch events.",
     stack: ["Shopify", "Magento", "Javascript", "PHP", "Liquid"],
   },
 ];

@@ -12,7 +12,7 @@ export default function FellowshipSection() {
 
       <p className="section__lead">
         A decade of building for millions has proven that the most resilient systems are born from elite 
-        collaboration. Every high-visibility deployment and legacy migration was a shared mission, executed alongside peers who challenged the architecture and raised the standard.
+        collaboration.
       </p>
 
       <ol className="timeline">
