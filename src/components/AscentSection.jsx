@@ -8,11 +8,11 @@ export default function AscentSection() {
         <span className="panel__chap">Chapter III · The Ascent</span>
       </div>
 
-      <h2 className="section__title">Hard problems, harder won.</h2>
+      <h2 className="section__title">The Summit of the Craft</h2>
 
       <p className="section__lead">
-        Side quests that became real infrastructure. Each of these is open source
-        and documented.
+        Where professional experience meets deep exploration. These projects represent a focused ascent into high-availability infrastructure, self-service automation, 
+        and secure-by-design architecture. Tools forged to master the complex landscapes ahead.
       </p>
 
       <ul className="projects">
