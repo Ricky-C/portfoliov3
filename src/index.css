@@ -1328,6 +1328,29 @@ button {
     min-width: unset;
   }
 
+  /* Shire panel desktop styling extends the scrim past the panel box
+     (overflow: visible, negative left margin) — that breaks internal
+     scrolling, which we need on mobile so users can read content taller
+     than the viewport. Re-enable scroll, contain the scrim within the
+     panel bounds, and align the panel flush with the chapter padding. */
+  .panel--shire {
+    overflow: auto;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .panel--shire::before {
+    inset: 0;
+  }
+
+  /* Default scroll chaining: panel scrolls its own content first, then
+     once it hits its bottom, additional swipe propagates to the snap
+     container and advances the chapter. Make that explicit so we don't
+     inherit a stricter overscroll-behavior from any browser default. */
+  .panel {
+    overscroll-behavior-y: auto;
+  }
+
   .chap-nav__list {
     display: none;
   }
